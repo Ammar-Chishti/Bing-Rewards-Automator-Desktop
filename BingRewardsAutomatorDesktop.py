@@ -4,11 +4,11 @@ import time
 import string
 import random
 
-def create_URLs() -> list:  # Creates 25 URLs to search on bing.com to earn rewards points
+def create_URLs() -> list:  # Creates 35 URLs to search on bing.com to earn rewards points
     list_of_URLs = []
 
-    for i in range(25):
-        root = "bing.com/search?q="
+    for i in range(35):
+        root = "https://bing.com/search?q="
 
         letters = string.ascii_letters
         suffix = "".join(random.choice(letters) for i in range(10))
@@ -33,6 +33,15 @@ password.send_keys("your_password")
 
 submit_button = browser.find_element_by_id("idSIButton9")
 submit_button.click()
+time.sleep(1)
+
+list_of_URLs = create_URLs()
+
+for URL in list_of_URLs:    # Perform 35 searches
+    browser.get(URL)
+    time.sleep(1)
+
+browser.close()     # Close Chrome
 
 
 
