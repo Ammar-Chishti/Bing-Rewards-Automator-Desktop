@@ -11,5 +11,13 @@ email.send_keys("your_email")
 
 submit_button = browser.find_element_by_id("idSIButton9")
 submit_button.click()
+time.sleep(1)   # Everytime you open a new webpage, you must wait a little bit for the webpage to load
+
+password = browser.find_element_by_id("i0118")
+password.send_keys("your_password")
+
+submit_button = browser.find_element_by_id("idSIButton9")
+submit_button.click()
+
 
 
