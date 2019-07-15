@@ -1,6 +1,21 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+import string
+import random
+
+def create_URLs() -> list:  # Creates 25 URLs to search on bing.com to earn rewards points
+    list_of_URLs = []
+
+    for i in range(25):
+        root = "bing.com/search?q="
+
+        letters = string.ascii_letters
+        suffix = "".join(random.choice(letters) for i in range(10))
+        list_of_URLs.append(root + suffix)
+
+    return list_of_URLs
+
 
 browser = webdriver.Chrome("/usr/local/bin/chromedriver")
 
