@@ -1,5 +1,4 @@
-*Note that this program has only been tested to work on macOS
-*Make sure you have python3 installed
+*Works on MacOS and Linux Ubuntu
 
 In order to run this program:
 1.) Install selenium -> type "pip3 install selenium" into terminal
